@@ -54,6 +54,12 @@ exports.getAllStations = async ({ at }) => {
             },
             include: [{ all: true }]
         })
+        if (!data || data.length == 0) {
+            throw {
+                status: 404,
+                message: 'No data found'
+            }
+        }
 
         let weather = data[0].weather;
 
@@ -82,8 +88,16 @@ exports.getStationDetails = async ({ at, id }) => {
             include: [{ all: true }]
         })
 
+        if (!station) {
+            throw {
+                status: 404,
+                message: 'No data found'
+            }
+        }
+
         station = station.get({ plain: true })
-        
+
+
         let weather = station.weather;
 
         delete station.weather
