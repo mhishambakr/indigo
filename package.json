@@ -1,0 +1,26 @@
+{
+  "name": "indigo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "jest",
+    "create": "mkdir src/$NAME; touch src/$NAME/$NAME.controller.js;  touch src/$NAME/$NAME.middlewares.js; touch src/$NAME/$NAME.model.js; touch src/$NAME/$NAME.routes.js; touch src/$NAME/$NAME.service.js; touch src/$NAME/$NAME.validation.js; touch src/$NAME/$NAME.spec.js;"
+  },
+  "author": "Mohamed Bakr",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "joi": "^17.6.2",
+    "moment": "^2.29.4",
+    "mysql2": "^2.3.3",
+    "node-cron": "^3.0.2",
+    "node-fetch": "^2.6.7",
+    "sequelize": "^6.24.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
